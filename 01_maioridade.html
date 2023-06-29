@@ -1,14 +1,17 @@
 <meta charset="UTF-8">
 <script>
-    //Problema: Maioridade
-    //Leia a idade de uma pessoa e informe se ela já chegou à maioridade.Se ela ainda não chegou, informe quantos anos faltam para a maioridade.
+    // Problema: Maioridade
+    // Leia a idade de uma pessoa e informe se ela já chegou à maioridade.
+    // Se ela ainda não chegou, informe quantos anos faltam para a maioridade.
 
-    //Entrada
+    // Entrada
+    const idade = parseInt(prompt("Informe a sua idade"));
+    const anosFaltantes = 18 - idade;
 
+    // Processamento
+    let mensagemFinal = "";
+    (idade >= 18) ? mensagemFinal = "Maioridade alcançada!" : mensagemFinal = "Faltam " + anosFaltantes + " anos para a maioridade."
 
-    //Processamento
-
-
-    //Saída
-
+    // Saída
+    alert(mensagemFinal);
 </script>

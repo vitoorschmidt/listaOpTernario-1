@@ -7,12 +7,19 @@
     // Se o total de horas trabalhadas ultrapassar 60 horas, haverá adicional de 30%.
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
-    //Entrada
+    // Entrada
+    const horasTrabalhadas = parseFloat(prompt("Digite a quantidade de horas trabalhadas semanalmente:"));
+    const valorPorHora = parseFloat(prompt("Digite o valor recebido por hora trabalhada:"));
 
+    // Processamento
+    const adicional = horasTrabalhadas <= 45 ? 0 :
+                      horasTrabalhadas <= 60 ? 0.2 :
+                      0.3;
 
-    //Processamento
+    let salarioFinal = (horasTrabalhadas * valorPorHora) * (1 + adicional);
+    let valorHoraTrabalhada = salarioFinal / horasTrabalhadas;
 
-    
-    //Saída
+    // Saída
+    alert("O salário final semanal é: R$" + salarioFinal.toFixed(2) + " O valor da hora trabalhada é: R$" + valorHoraTrabalhada.toFixed(2));
 
 </script>

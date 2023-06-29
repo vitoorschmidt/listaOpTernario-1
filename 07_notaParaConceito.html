@@ -1,20 +1,19 @@
 <meta charset="UTF-8">
 <script>
-    //Problema: Nota para Conceito
-    // Converta a nota para conceito, conforme a tabela abaixo:
-    // Nota                     Conceito
-    // Entre 10.0 e 9.0            A
-    // Entre 8.9 e 8.0             B
-    // Entre 7.9 e 7.0             C
-    // Entre 6.9 e 6.0             D
-    // Entre 5.9 e zero            E
+    // Problema: Nota para Conceito
+    // Converta a nota para conceito, conforme a tabela fornecida.
 
-    //Entrada
+    // Entrada
+   const nota = parseFloat(prompt("Digite a nota:"));
 
+    // Processamento
+   let conceito = nota >= 9.0 ? "A" :
+                   nota >= 8.0 ? "B" :
+                   nota >= 7.0 ? "C" :
+                   nota >= 6.0 ? "D" :
+                   "E";
 
-    //Processamento
-
+    // Saída
+    alert("O conceito correspondente à nota é: " + conceito);
     
-    //Saída
-
 </script>

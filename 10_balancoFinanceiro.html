@@ -9,12 +9,20 @@
     // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
-    //Entrada
+    // Entrada
+    const contaAgua = parseFloat(prompt("Digite o valor da conta de água:"));
+    const contaEnergia = parseFloat(prompt("Digite o valor da conta de energia elétrica:"));
+    const contaTelefone = parseFloat(prompt("Digite o valor da conta de telefone:"));
+    const supermercado = parseFloat(prompt("Digite o valor das despesas de supermercado:"));
+    const salario = parseFloat(prompt("Digite o valor do seu salário mensal:"));
 
+    // Processamento
+    let totalDespesas = contaAgua + contaEnergia + contaTelefone + supermercado;
+    let saldo = salario - totalDespesas;
+    let resultado = saldo >= 0 ? "Sobrou R$" + saldo.toFixed(2) + " após o pagamento das contas." 
+    : " Faltaram R$" + (-saldo).toFixed(2) + " para pagar todas as contas previstas.";
 
-    //Processamento
+    // Saída
+    alert(resultado);
 
-    
-    //Saída
-    
 </script>
